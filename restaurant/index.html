@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/index.css">
+    <title>test Api ajax</title>
+</head>
+<body>
+    <div class="content">
+       <div class="header">
+        <h1>api ajak </h1>
+        
+        <select name="show_type" onchange="show_type()" id="get_type">
+            <option value="">---- select ----</option>
+            <option value="seller">sellere</option>
+            <option value="programer">programer</option>
+            <option value="counter">counter</option>
+        </select>
+        
+        <button id="btn_insert" onclick="show_modal_insert()">insert more</button>
+       </div>
+
+      <div class="table">
+        <table>
+            <thead>
+                <tr>
+                    <th>id</th>
+                    <th>name</th>
+                    <th>type</th>
+                    <th>btn</th>
+                </tr>
+            </thead>
+            <tbody id="show">
+              
+            </tbody>
+           </table>
+        </div>
+      </div>
+
+     
+  </div>
+  <div class="modal" id="modal_creat">
+    <div class="modal-bg" onclick="close_modal()"></div>
+    <div class="modal-card">
+        <h1>creat more datas</h1>
+        <div class="form-control">
+            <span>name</span>
+            <input type="text" name="name" id="name" class="txt" placeholder="key here">
+        </div>
+        <div class="form-control">
+            
+            <select class="txt" name="type" id="type">
+                <option value="">---- select ----</option>
+                <option value="seller">sellere</option>
+                <option value="programer">programer</option>
+                <option value="counter">counter</option>
+            </select>
+        </div>
+        <div class="form-submit">
+            <button onclick="get_creat()" id="btn_creat">creat</button>
+        </div>
+    </div>
+</div>
+
+<div class="modal" id="modal-edit">
+
+<div class="modal-bg" onclick="close_modal()"> </div>
+    <div class="modal-card">
+        <h1>edit data</h1>
+        <div class="form-control">
+            <span>name</span>
+            <input type="hidden" name="" id="edit_id" class="txt" placeholder="key here">
+            <input type="text" name="" id="edit_txt" class="txt" placeholder="key here">
+        </div>
+        <div class="form-control">
+            
+            <select class="txt" name="" id="edit_op">
+                <option value="">---- select ----</option>
+                <option value="seller">sellere</option>
+                <option value="programer">programer</option>
+                <option value="counter">counter</option>
+            </select>
+        </div>
+        <div class="form-submit">
+            <button onclick="get_edit()" id="btn_creat">creat</button>
+        </div>
+    </div>
+  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script  type="text/javascript" src="./js/script.js"></script>
+</body>
+</html>
